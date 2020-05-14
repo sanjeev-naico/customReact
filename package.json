@@ -1,6 +1,6 @@
 {
-  "name": "custom_component",
-  "version": "1.0.0",
+  "name": "@sanjeev-naico/react-custom",
+  "version": "0.0.4",
   "description": "Naico custom component",
   "main": "index.js",
   "scripts": {

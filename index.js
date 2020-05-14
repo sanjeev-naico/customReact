@@ -33,37 +33,32 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var DummyComponent = /*#__PURE__*/function (_Component) {
-  _inherits(DummyComponent, _Component);
+var CustomReact = /*#__PURE__*/function (_Component) {
+  _inherits(CustomReact, _Component);
 
-  var _super = _createSuper(DummyComponent);
+  var _super = _createSuper(CustomReact);
 
-  function DummyComponent() {
-    _classCallCheck(this, DummyComponent);
+  function CustomReact() {
+    _classCallCheck(this, CustomReact);
 
     return _super.apply(this, arguments);
   }
 
-  _createClass(DummyComponent, [{
+  _createClass(CustomReact, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react["default"].createElement(_react.Fragment, null, /*#__PURE__*/_react["default"].createElement("button", {
-        onClick: function onClick() {
-          alert("Oh look, an alert!");
-        }
-      }, "Show Alert"), /*#__PURE__*/_react["default"].createElement("button", {
-        onClick: function onClick() {
-          console.log("You just broke something!");
-        }
-      }, "Oops, an error"), /*#__PURE__*/_react["default"].createElement("button", {
-        onClick: function onClick() {
-          console.log("It's ok now!");
-        }
-      }, "Success!"));
+      function handleChange(e) {
+        console.log(e.target.value);
+      }
+
+      return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("input", {
+        placeholder: this.props.placeholder,
+        onChange: handleChange
+      }));
     }
   }]);
 
-  return DummyComponent;
+  return CustomReact;
 }(_react.Component);
 
-exports["default"] = DummyComponent;
+exports["default"] = CustomReact;

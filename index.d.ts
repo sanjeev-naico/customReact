@@ -1,2 +1,2 @@
-import DummyComponent from './index.js'
-export default DummyComponent
+import CustomReact from './index.js'
+export default CustomReact
